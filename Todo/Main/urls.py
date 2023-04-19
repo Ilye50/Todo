@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todo.views import main_page ,about_page
+from todo.views import index
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main',main_page),
-    path('about',about_page)
+    path('main/',index),
+    
 ]

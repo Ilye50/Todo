@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import  HttpResponse
+from .models import Todo
 
-def main_page(request):
-	return HttpResponse("Hello World")
-def about_page(requst):
-	return HttpResponse("HELLO HUMAN =3")
+def index(request):
+	todos = Todo.objects.all()
+	return render(request,"index.html",{"todos":todos})
